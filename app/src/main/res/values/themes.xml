@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MapApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="AppTheme.Dark.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorDarkgrey</item>
+
+    </style>
+    <style name="CustomToolbarStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item> <!-- Optional: set the text color -->
+    </style>
+
+</resources>

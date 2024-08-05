@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/info_bottom_sheet_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MapApp"
+    style="@style/Widget.Material3.BottomSheet.Modal"
+    android:elevation="10dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_alignParentBottom="true"
+    android:alpha="0.9"
+   >
+
+        <!-- Drag handle for accessibility -->
+        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+            android:id="@+id/drag_handle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            />
+    <TextView
+        android:text="SIBAMA v.5 DPUPRPKP Kota Malang 2024"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center|end"
+        android:textColor="#716D6D"
+        android:textStyle="italic"
+        android:layout_marginEnd="18dp"
+        android:textSize="11sp" />
+
+        <LinearLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface" />
+
+            <ProgressBar
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|top"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_foto1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="70dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/imagekosong"
+                    android:contentDescription="Image View" />
+
+                <ImageButton
+                    android:id="@+id/btn_foto2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/rounded_border_edittext"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/imagekosong"
+                    android:contentDescription="Image View" />
+            </TableRow>
+
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:layout_weight="0.8"
+                    android:background="@drawable/spinner_item_divider2"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:layout_height="match_parent"
+
+                    android:text="Jalan :"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/stsnamajalan"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_item_divider2"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="-"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_item_divider3">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="Posisi di Lajur :"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/stslajur"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="-"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_item_divider2">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="Panjang Drainase :"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/stspanjang"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="0m"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_item_divider3">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="Arah Air :"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/stsarah"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="-"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_item_divider2">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="Tipe Drainase :"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ststipe"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="-"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_item_divider3">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="Kondisi Fisik :"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/stskondisifisik"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="-"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_item_divider2">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="Status Genangan :"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/stsgenangan"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="-"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_item_divider3">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="Diperbarui Tanggal :"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ststglupdate"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="--"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_item_divider2">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="Kecamatan :"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/stskecamatan"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:padding="10dip"
+                    android:text="-"
+                    android:textColor="#535353"
+                    android:textSize="12sp" />
+            </TableRow>
+        </LinearLayout>
+</LinearLayout>

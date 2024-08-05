@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_splash_screen"
+    android:gravity="center_horizontal"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="100dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/sibamaiconrev" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/titilliumbold"
+            android:gravity="center"
+            android:letterSpacing=".1"
+            android:text="SIBAMA"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/titilliumtregular"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="SISTEM INFORMASI BANYU MALANG"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/titilliumbold"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="WADAH PENGENDALIAN GENANGAN"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_marginTop="50dp"
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:trackThickness="3dp"
+            app:indicatorColor="@color/teal_200"
+            android:visibility="visible"
+            android:indeterminate="true"
+            app:trackColor="@color/white"
+            app:hideAnimationBehavior="outward" />
+
+        <TextView
+            android:layout_marginTop="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_r"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:text="Dinas PUPRPKP Kota Malang\n2020-2024"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

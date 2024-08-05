@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginTop="10dp"
+
+    app:layout_behavior="com.google.android.material.sidesheet.SideSheetDialog"
+
+    >
+    <!--style="@style/Widget.Material3.SideSheet.Modal"-->
+    <TextView
+        android:textColor="@color/colorDarkgrey2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+
+    <!--<RadioGroup
+        android:id="@+id/radioGroupGenangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:textColor="@color/colorDarkgrey2"
+            android:id="@+id/radio_genangan"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Titik Rawan Genangan"
+            android:textSize="13sp"
+            android:checked="true"
+            />
+    </RadioGroup>-->
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupKecamatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <RadioButton
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            android:id="@+id/radio_blimbing"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Kec. Blimbing"
+            android:buttonTint="@color/colorPrimaryDark"
+
+            />
+
+
+        <RadioButton
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            android:id="@+id/radio_sukun"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Kec. Sukun" />
+
+        <RadioButton
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            android:id="@+id/radio_lowokwaru"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Kec. Lowokwaru" />
+
+        <RadioButton
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            android:id="@+id/radio_kedkandang"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Kec. Kedungkandang" />
+
+        <RadioButton
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            android:id="@+id/radio_klojen"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Kec. Klojen" />
+
+
+    </RadioGroup>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginTop="15dp"
+        android:id="@+id/reset_button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Reset"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_refresh"
+        app:iconTint="@color/white"/>
+
+
+
+
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_marginTop="20dp"
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:trackThickness="3dp"
+        app:indicatorColor="@color/colorPrimary"
+        android:visibility="gone"
+        android:indeterminate="true"
+        app:trackColor="@color/white"
+        app:hideAnimationBehavior="outward" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- Tambahkan data row di sini -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_marginStart="8dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/hujan"
+                    android:layout_gravity="center"
+                    app:tint="@android:color/holo_blue_light"/>
+
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Precipitation Sum"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkgrey2"
+                    android:layout_gravity="top"
+                    />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textViewTitle"
+
+                android:layout_marginTop="8dp"
+                android:padding="8dp"/>
+
+         <!--   <com.google.android.material.button.MaterialButton
+                android:id="@+id/refresh_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Refresh"
+                app:icon="@drawable/ic_updown"
+                android:textColor="@color/white"
+                app:iconTint="@color/white"/>-->
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_marginTop="15dp"
+                android:id="@+id/sinkron_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Sync Data"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_refresh"
+                app:iconTint="@color/white"/>
+
+            <TextView
+                android:text="Data Source: open-meteo.com"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center|start"
+                android:padding="10dip"
+                android:textColor="#716D6D"
+                android:textStyle="italic"
+                android:textSize="11sp"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/legenda"
+                android:contentDescription="Image View"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+</LinearLayout>
